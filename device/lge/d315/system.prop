@@ -1,0 +1,33 @@
+# LG F70 D315 (f70n) - MSM8926, 480x800, 1 GB RAM
+
+# Siec - zgodnie ze stockiem: default_network=9 => LTE/GSM/WCDMA (LTE preferowane)
+telephony.lteOnCdmaDevice=1
+ro.telephony.default_network=9
+net.tcp.buffersize.lte=524288,1048576,2097152,524288,1048576,2097152
+
+# Ekran 4.5" WVGA
+ro.sf.lcd_density=200
+
+# Audio - F70 nie uzywa fluence endfire (stock: none)
+ro.qc.sdk.audio.fluencetype=none
+
+# Sensory (Qualcomm SNS, jak w stocku F70)
+ro.qualcomm.sensors.qmd=false
+ro.qc.sdk.sensors.gestures=true
+ro.qualcomm.sensors.pedometer=false
+ro.qc.sensors.step_detector=true
+ro.qc.sensors.step_counter=true
+ro.qualcomm.sensors.pam=true
+ro.qualcomm.sensors.scrn_ortn=true
+ro.qualcomm.sensors.smd=true
+ro.qualcomm.sensors.game_rv=false
+ro.qualcomm.sensors.georv=true
+ro.qc.sensors.smgr_mag_cal_en=false
+ro.qc.sensors.max_grav_no_gyro=50
+ro.qc.sensors.max_geomag_rotvec=50
+
+# Bluetooth
+qcom.bluetooth.soc=smd
+
+# Brak NFC / IR
+ro.nfc.port=

@@ -1,0 +1,18 @@
+# Proprietary LG binaries — never commit these.
+vendor/lge/d315/proprietary/
+**/proprietary/*.apk
+**/proprietary/*.so
+**/proprietary/*.fw
+**/proprietary/*.mbn
+**/proprietary/*.mdt
+**/proprietary/*.acdb
+
+# Build output
+out/
+*.o
+*.o.ur-safe
+*.ko
+*.img
+*.zip
+*.pyc
+__pycache__/
