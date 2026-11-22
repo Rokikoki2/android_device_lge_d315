@@ -28,9 +28,27 @@ Device trees used as a base:
 ## Required proprietary blobs
 
 The files listed in `vendor/lge/d315/proprietary-blobs.txt` are NOT included.
-Extract them from an LG F70 D315 stock ROM (Android 4.4.2, tested on firmware v10m)
-into `vendor/lge/d315/proprietary/` with `extract_files.py` from TheMuppets,
-or copy them from an existing device with `adb pull`.
+Extract them from an LG F70 D315 stock ROM (Android 4.4.2, tested on firmware v10m):
+
+```sh
+# Linux: mount the stock system.img read-only
+sudo mkdir -p /mnt/d315-system
+sudo mount -o loop,ro system.img /mnt/d315-system
+./extract-blobs.sh /mnt/d315-system
+
+# Windows: extract system.img with 7-Zip, then run from the repo root
+sh extract-blobs.sh /c/Users/You/Downloads/stock/system
+```
+
+The script copies every listed file into `vendor/lge/d315/proprietary/` and
+reports any missing ones. Alternatively use `extract_files.py` from TheMuppets
+or `adb pull` from a running stock ROM.
+
+## Licensing
+
+See `LICENSES.md`. In short: device tree and vendor makefiles are Apache-2.0,
+kernel files are GPL-2.0 (see `kernel/COPYING`), and proprietary LG files are
+not distributed here.
 
 ## Build
 
